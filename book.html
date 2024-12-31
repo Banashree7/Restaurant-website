@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: bisque;
+}
+
+.container {
+  width: 100%;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #f07f2f;
+}
+
+.submit-btn {
+  padding: 12px;
+  background-color: #f07f2f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #e67e22;
+}
+
+    </style><!-- If you're using an external CSS file -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>BOOK NOW</h1>
+
+        <div class="form">
+            <div class="input-group">
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Phone No" required>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Date/Time" required>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Any Specific Requirement" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </div>
+    </div>
+    <script>
+      document.getElementById('datetime').addEventListener('click', function () {
+          // Create a datetime-local input dynamically
+          const tempInput = document.createElement('input');
+          tempInput.type = 'datetime-local';
+          tempInput.style.position = 'absolute';
+          tempInput.style.opacity = '0';
+
+          // Append the input to the body to trigger the datetime picker
+          document.body.appendChild(tempInput);
+          tempInput.focus();
+
+          // On date change, set the value back to the original input
+          tempInput.addEventListener('change', function () {
+              document.getElementById('datetime').value = this.value;
+              document.body.removeChild(tempInput);
+          });
+
+          // Remove the temporary input if the user clicks away
+          tempInput.addEventListener('blur', function () {
+              document.body.removeChild(tempInput);
+          });
+      });
+  </script>
+</body>
+
+
+</html>

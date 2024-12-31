@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Gallery</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F7F7F7;
+            background-color: bisque;
+        }
+
+        /* Cards Section */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 30px;
+            justify-content: center;
+
+        }
+
+        .card {
+            border-radius: 10px;
+            background-color: #fff;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            height: 400px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            object-fit: cover;
+            height: 200px;
+            border-radius: 5px;
+        }
+
+        .content {
+            padding: 10px;
+        }
+
+        .content h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 14px;
+            color: gray;
+        }
+
+        .button button {
+            padding: 7px 15px;
+            border-radius: 15px;
+            background-color: rgb(216, 236, 253);
+            color: rgb(14, 150, 234);
+            font-size: 12px;
+            margin-top: 7px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .hero-content h1 span {
+            color: #333;
+            /* Adjusted to avoid blending into the background */
+        }
+
+        .hero-content p {
+            margin: 15px 0;
+            color: #555;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 35px 30px;
+            background-color: #ffff;
+        }
+
+        .center-text {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .center-text h1 {
+        font-size: 4em;
+        font-weight: bold;
+        color: #D35400; /* Spicy orange color */
+        margin-bottom: 10px;
+    }
+
+    .center-text h1 span {
+        color: #e7311d; /* Bold red for highlight */
+    }
+
+    .center-text p {
+        font-size: 1.5em;
+        color: #000000;
+        margin-top: 10px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 1024px) {
+        .center-text h1 {
+            font-size: 3em;
+        }
+
+        .center-text p {
+            font-size: 1.3em;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .center-text h1 {
+            font-size: 2.5em;
+        }
+
+        .center-text p {
+            font-size: 1.2em;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .center-text h1 {
+            font-size: 2em;
+        }
+
+        .center-text p {
+            font-size: 1em;
+        }
+
+        .center-text {
+            padding: 10px;
+        }
+    }
+
+
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .card {
+                height: auto;
+                width: 100%;
+            }
+
+            .content h2 {
+                font-size: 16px;
+            }
+
+            .content p {
+                font-size: 12px;
+            }
+
+            .card img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="center-text">
+        <h1>Enjoy <span>Delicious Food <br></span> in Your Healthy Life</h1>
+        <p>Discover the best that nourishes your body and soul. Enjoy our fresh and healthy meals.</p>
+    </div>
+    <div class="container">
+
+        <!-- Cards Section -->
+        <div class="card">
+            <img src="butpn.webp" alt="Butter Paneer">
+            <div class="content">
+                <h2>Butter Paneer</h2>
+                <p>A creamy delight made with soft paneer cubes and rich gravy.</p>
+            </div>
+            <div class="button">
+                <button>Add</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="dunshingri.webp" alt="Dum Shingri">
+            <div class="content">
+                <h2>Dum Shingri</h2>
+                <p>A flavorful dish made with tender prawns cooked to perfection.</p>
+            </div>
+            <div class="button">
+                <button>Add</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Dhokla.webp" alt="Dhokla">
+            <div class="content">
+                <h2>Dhokla</h2>
+                <p>A spongy, tangy Gujarati snack that’s a crowd favorite.</p>
+            </div>
+            <div class="button">
+                <button>Add</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Masaladosa.webp" alt="Masala Dosa">
+            <div class="content">
+                <h2>Masala Dosa</h2>
+                <p>A crispy South Indian crepe filled with spiced potato curry.</p>
+            </div>
+            <div class="button">
+                <button>Add</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="vindalooChi.webp" alt="Vindaloo Chicken">
+            <div class="content">
+                <h2>Vindaloo Chicken</h2>
+                <p>A spicy Goan curry dish with tender chicken pieces.</p>
+            </div>
+            <div class="button">
+                <button>Add</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="chaat.webp" alt="Chaat">
+            <div class="content">
+                <h2>Chaat</h2>
+                <p>A popular street food packed with tangy, sweet, and spicy flavors.</p>
+            </div>
+            <div class="button">
+                <button>Add</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="vegetable-samosa.webp" alt="Vegetable Samosa">
+            <div class="content">
+                <h2>Vegetable Samosa</h2>
+                <p>A crispy, golden pastry filled with spiced vegetables.</p>
+            </div>
+            <div class="button">
+                <button>Add</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="thangdi-kebab.webp" alt="Tangdi Kebab">
+            <div class="content">
+                <h2>Tangdi Kebab</h2>
+                <p>Juicy chicken drumsticks marinated in aromatic spices.</p>
+            </div>
+            <div class="button">
+                <button>Add</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="chole-bhature-3.webp" alt="Chole Bhature">
+            <div class="content">
+                <h2>Chole Bhature</h2>
+                <p>A classic Punjabi dish of spicy chickpeas and fried bread.</p>
+            </div>
+            <div class="button">
+                <button>Add</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="fishtikka.webp" alt="Fish Tikka">
+            <div class="content">
+                <h2>Fish Tikka</h2>
+                <p>Succulent fish pieces marinated and grilled to perfection.</p>
+            </div>
+            <div class="button">
+                <button>Add</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
